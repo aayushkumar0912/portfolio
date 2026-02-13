@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aayush Kumar | Portfolio</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#8b5cf6',
+                        dark: '#0f172a',
+                        darkCard: '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .dark .glass-nav {
+            background: rgba(15, 23, 42, 0.7);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .skill-card:hover i { transform: scale(1.2); transition: transform 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-dark dark:text-gray-200 transition-colors duration-300">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 font-bold text-2xl tracking-tighter">
+                    <span class="text-primary">&lt;</span>Aayush<span class="text-secondary">/&gt;</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#about" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#skills" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#projects" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#education" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Education</a>
+
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition focus:outline-none">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-300 text-xl"></i>
+                    </button>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-btn" class="p-2 rounded-md focus:outline-none">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-darkCard shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-700">Projects</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between">
+                <div class="w-full md:w-1/2 space-y-6" data-aos="fade-right">
+                    <p class="text-lg text-primary font-medium tracking-wide">Hello, I'm</p>
+                    <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                        Aayush <br>
+                        <span class="gradient-text">Kumar</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-lg">
+                        Computer Science Engineering Student & Aspiring Software Developer specializing in Web Technologies, Machine Learning, and Network Security.
+                    </p>
+                    <div class="flex gap-4 pt-4">
+                        <a href="https://github.com/aayushkumar0912" target="_blank" class="px-6 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 flex items-center gap-2">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/aayush369/" target="_blank" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 flex items-center gap-2">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_w98qte06.json"  background="transparent"  speed="1"  style="width: 100%; max-width: 500px;"  loop  autoplay></lottie-player>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white dark:bg-darkCard transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative" data-aos="zoom-in">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-primary to-secondary rounded-xl blur-lg opacity-30">
+                    </div>
+                    <img src="Aayush_Photo.jpg" alt="Coding Setup" class="relative rounded-xl ml-32 shadow-2xl h-80">
+                </div>
+                
+                <div class="space-y-6" data-aos="fade-up">
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+                        I am a <span class="text-primary font-semibold">B.Tech Computer Science</span> student at Lovely Professional University. My passion lies in solving complex problems through code, whether it's building interactive web applications or analyzing network security.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+                        I have experience working with <span class="text-secondary font-semibold">Java, Python, and C++</span>, and I have developed full-stack applications using React and Flask. Beyond development, I have a keen interest in Cybersecurity concepts like Packet Analysis and O.S.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mt-6">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-trophy text-yellow-500 text-xl"></i>
+                            <span class="font-medium">Hackathon Winner</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-code text-blue-500 text-xl"></i>
+                            <span class="font-medium">Full Stack Dev</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-shield-alt text-green-500 text-xl"></i>
+                            <span class="font-medium">Network Security</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-brain text-purple-500 text-xl"></i>
+                            <span class="font-medium">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Technical Skills</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-darkCard p-6 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-code text-primary"></i> Languages</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">Java</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">C++</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">C</span>
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">Python</span>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-darkCard p-6 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-laptop-code text-secondary"></i> Web Technologies</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">HTML5/CSS3</span>
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">JavaScript</span>
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">React</span>
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">Tailwind</span>
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">Flask</span>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-darkCard p-6 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 skill-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-tools text-green-500"></i> Tools & DB</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Git/GitHub</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">MySQL</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Wireshark</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Kali Linux</span>
+                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Pandas/NumPy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-white dark:bg-darkCard transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group" data-aos="fade-up">
+                    <div class="h-2 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-2xl font-bold group-hover:text-primary transition">Smart Internship Tracker</h3>
+                            <i class="fas fa-tasks text-gray-400 text-2xl"></i>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">
+                            A web application to organize and manage internship applications. Features a dashboard to display total applications, interviews, offers, and rejections. Real-time categorization and progress tracking.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs font-semibold px-2 py-1 rounded bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300">React</span>
+                            <span class="text-xs font-semibold px-2 py-1 rounded bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300">Tailwind CSS</span>
+                            <span class="text-xs font-semibold px-2 py-1 rounded bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300">JavaScript</span>
+                        </div>
+                        <a href="https://smart-internship-tracker.vercel.app/" target="_blank" class="inline-flex items-center text-primary font-semibold hover:underline">
+                            View Project <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-2 bg-gradient-to-r from-red-500 to-orange-500"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-2xl font-bold group-hover:text-red-500 transition">AI Phishing Detection</h3>
+                            <i class="fas fa-shield-virus text-gray-400 text-2xl"></i>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">
+                            Intelligent phishing URL detection system using Machine Learning. Implemented feature extraction (lexical, domain-based) to classify suspicious links in real-time. Created a prediction API for fast classification.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs font-semibold px-2 py-1 rounded bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300">Python</span>
+                            <span class="text-xs font-semibold px-2 py-1 rounded bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300">Flask</span>
+                            <span class="text-xs font-semibold px-2 py-1 rounded bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300">Machine Learning</span>
+                        </div>
+                        <a href="https://github.com/aayushkumar0912" class="inline-flex items-center text-primary font-semibold hover:underline">
+                            View Project <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                        <i class="fas fa-graduation-cap text-primary"></i> Education
+                    </h3>
+                    <div class="space-y-8 pl-4 border-l-2 border-gray-200 dark:border-gray-700">
+                        <div class="relative pl-8">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-dark"></div>
+                            <h4 class="text-lg font-bold">B.Tech - CSE</h4>
+                            <p class="text-primary font-medium">Lovely Professional University</p>
+                            <p class="text-sm text-gray-500">Aug 2023 - Present | CGPA: 6.52</p>
+                            <p class="text-sm text-gray-400 mt-1">Phagwara, Punjab</p>
+                        </div>
+                        <div class="relative pl-8">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-400 ring-4 ring-white dark:ring-dark"></div>
+                            <h4 class="text-lg font-bold">Intermediate</h4>
+                            <p class="text-primary font-medium">Brillant Public School</p>
+                            <p class="text-sm text-gray-500">Apr 2020 - Mar 2022 | 78%</p>
+                            <p class="text-sm text-gray-400 mt-1">Jehanabad, Bihar</p>
+                        </div>
+                        <div class="relative pl-8">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-400 ring-4 ring-white dark:ring-dark"></div>
+                            <h4 class="text-lg font-bold">Matriculation</h4>
+                            <p class="text-primary font-medium">D.A.V Public School</p>
+                            <p class="text-sm text-gray-500">Apr 2019 - Mar 2020 | 88%</p>
+                            <p class="text-sm text-gray-400 mt-1">Jehanabad, Bihar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                        <i class="fas fa-certificate text-secondary"></i> Certifications & Wins
+                    </h3>
+                    
+                    <div class="bg-gradient-to-r from-yellow-500 to-orange-500 p-1 rounded-xl mb-6 shadow-lg">
+                        <div class="bg-white dark:bg-darkCard p-4 rounded-lg flex items-start gap-4 h-full">
+                            <div class="p-3 bg-yellow-100 dark:bg-yellow-900 rounded-full text-yellow-600 dark:text-yellow-400">
+                                <i class="fas fa-trophy text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">2nd Position - CODEHUNT Hackathon</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Participated in a 24-hour hackathon, collaborated in a team of 4 (Sept 2024).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-4">
+                        <a href="https://www.linkedin.com/posts/aayush369_certificate-activity-7427412112408444928-znKv/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEjz4XsBqDrZbJSQkVCdkBzTDIZdTC4_MBo" target="_blank">
+                            <div class="bg-white dark:bg-darkCard p-4 rounded-lg shadow border border-gray-100 dark:border-gray-700 flex items-center gap-4">
+                                <i class="fas fa-robot text-purple-500 text-xl"></i>
+                                <div>
+                                    <h4 class="font-bold text-sm">Master Generative AI</h4>
+                                    <p class="text-xs text-gray-500">Infosys Springboard (Sept 2025)</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a>
+                        <div class="bg-white dark:bg-darkCard p-4 rounded-lg shadow border border-gray-100 dark:border-gray-700 flex items-center gap-4">
+                            <i class="fas fa-sitemap text-blue-500 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-sm">Basics of DSA using C++</h4>
+                                <p class="text-xs text-gray-500">Centre for Professional Enhancement</p>
+                            </div>
+                        </div>
+                        </a>
+                        <a>
+                        <div class="bg-white dark:bg-darkCard p-4 rounded-lg shadow border border-gray-100 dark:border-gray-700 flex items-center gap-4">
+                            <i class="fas fa-comment-dots text-green-500 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-sm">ChatGPT-4 Prompt Engineering</h4>
+                                <p class="text-xs text-gray-500">Infosys (Aug 2025)</p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-white dark:bg-darkCard pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-8">Let's Connect</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
+                <a href="mailto:ayushkumar53345@gmail.com" class="flex items-center gap-3 px-6 py-4 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                    <i class="fas fa-envelope text-primary text-xl"></i>
+                    <span class="font-medium">ayushkumar53345@gmail.com</span>
+                </a>
+                <a href="tel:+917634915235" class="flex items-center gap-3 px-6 py-4 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                    <i class="fas fa-phone text-green-500 text-xl"></i>
+                    <span class="font-medium">+91-7634915235</span>
+                </a>
+                <a href="Aayush_CV.pdf" target="_blank" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 flex items-center gap-2">
+                    <i class="fab fa-download"></i> Download CV
+                </a>
+            </div>
+            
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="https://github.com/aayushkumar0912" class="text-gray-400 hover:text-gray-900 dark:hover:text-white text-2xl transition"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/aayush369/" class="text-gray-400 hover:text-blue-600 text-2xl transition"><i class="fab fa-linkedin"></i></a>
+            </div>
+            
+            <p class="text-gray-500 text-sm">
+                &copy; 2025 Aayush Kumar. All rights reserved. <br>
+                Designed with Dedication using HTML & Tailwind CSS.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+
+        // Dark Mode Logic
+        const toggleBtn = document.getElementById('theme-toggle');
+        const icon = toggleBtn.querySelector('i');
+        const html = document.documentElement;
+
+        // Check local storage
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            html.classList.remove('dark');
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            if (html.classList.contains('dark')) {
+                localStorage.theme = 'dark';
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.theme = 'light';
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+
+        // Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
